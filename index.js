@@ -66,7 +66,25 @@ function add() {
 function example() {
     let example1 = document.getElementById("example1")
     let listItem = document.getElementById("list_item")
+    let check = document.createElement("input")
+    check.type = "checkbox"
+    example1.appendChild(check)
+    example1.appendChild(document.createTextNode("Example 1: Interview People"))
     listItem.appendChild(example1)
+        check.onclick = function () {
+            if (check.checked) {
+                var audio = new Audio('audio.mp3');
+                example1.style.textDecoration = "line-through"
+                audio.play();
+                // alert("Congratulations on completing the task!")
+                //decided against using alert because its annoying everytime you click on complete
+                // console.log("striked")
+            } else if (!check.checked) {
+                example1.style.textDecoration = "none"
+            }
+
+        }
+
     var deleteButton = document.createElement("button"); //creates a button for delete
     deleteButton.setAttribute('class', 'delete')
     deleteButton.innerHTML = '<img src = "del.png" height="40%" width="40%" />'
@@ -77,6 +95,24 @@ function example() {
         example1.parentNode.removeChild(example1);
     }
     let example2 = document.getElementById("example2")
+    let check2 = document.createElement("input")
+    check2.type = "checkbox"
+    example2.appendChild(check2)
+        check2.onclick = function () {
+            if (check2.checked) {
+                var audio = new Audio('audio.mp3');
+                example2.style.textDecoration = "line-through"
+                audio.play();
+                // alert("Congratulations on completing the task!")
+                //decided against using alert because its annoying everytime you click on complete
+                // console.log("striked")
+            } else if (!check2.checked) {
+                example2.style.textDecoration = "none"
+            }
+
+        }
+    example2.appendChild(check2)
+    example2.appendChild(document.createTextNode("Example 2: Finish Research"))
     listItem.appendChild(example2)
     var deleteButton = document.createElement("button"); //creates a button for delete
     deleteButton.setAttribute('class', 'delete')
