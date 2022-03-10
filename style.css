@@ -1,0 +1,29 @@
+body{
+    background-color: rgb(8, 106, 185);
+}
+.delete{
+    background-color: transparent;
+    width: 100px;
+    height: 100px;
+    border: none;
+    position: relative;
+    left: 700px;
+}
+.date{
+    position: relative;
+    left: 680px;
+
+}
+.low{
+    color: green;
+}
+.med{
+    color: yellow;
+}
+/* select{
+    
+    background-color:red;
+} */
+select option{
+    color: red
+}
