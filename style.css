@@ -1,29 +1,60 @@
-body{
-    background-color: rgb(8, 106, 185);
+body {
+    background-color: wheat;
 }
-.delete{
-    background-color: transparent;
-    width: 100px;
-    height: 100px;
-    border: none;
-    position: relative;
-    left: 700px;
-}
-.date{
-    position: relative;
-    left: 680px;
 
+#addButton {
+    background-color: rgb(124, 168, 124);
+    color: white;
+    border: none;
+    padding: 9px;
+    border-radius: 5px;
 }
-.low{
-    color: green;
+
+#addButton:hover {
+    background-color: rgb(100, 177, 100); ;
 }
-.med{
-    color: yellow;
+
+#userInput {
+    border: #333 solid 0.5px;
+    padding: 5px 0;
 }
-/* select{
-    
-    background-color:red;
-} */
-select option{
-    color: red
+
+.delete {
+    background-color: transparent;
+    width: 75px;
+    height: 75px;
+    border: none;
+    margin-left: 50px;
+}
+
+.date {
+    margin-left: 100px;
+    padding-left: 5px;
+    justify-content: end;
+}
+
+.head {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 20px auto;
+}
+
+.list-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px auto;
+    width: fit-content;
+    border: solid 1px darkseagreen;
+    border-radius: 20px;
+    background-color: darkseagreen;
+}
+#priority{
+    padding: 5px;
+}
+#titlehead {
+    font-weight: bolder;
+    font-size: 50px;
 }
