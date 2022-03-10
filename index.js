@@ -1,6 +1,5 @@
 // called when you click on add
 function add() {
-
     // gets user input from the input
     let input = document.getElementById("userInput")
     let listItem = document.getElementById("list_item")
@@ -11,16 +10,16 @@ function add() {
         newLi.setAttribute('class', 'list-item')
         let priority = document.getElementById("priority")
         let value = priority.options[priority.selectedIndex].value;
-        if(value == ""){
+        if (value == "") {
             newLi.style.color = "black";
         }
-        else if(value == "high"){
+        else if (value == "high") {
             newLi.style.color = "red";
         }
-        else if(value == "medium"){
+        else if (value == "medium") {
             newLi.style.color = "yellow";
         }
-        else if(value == "low"){
+        else if (value == "low") {
             newLi.style.color = "blue";
         }
         let check = document.createElement("input")
@@ -45,8 +44,8 @@ function add() {
         let date = document.getElementById("date")
         let due = document.createElement("p")
         let text = document.createTextNode("");
-        if(date.value != ""){
-            
+        if (date.value != "") {
+
             text = document.createTextNode("Due date is " + date.value);
         }
         due.appendChild(text)
@@ -62,5 +61,30 @@ function add() {
         deleteButton.onclick = function () {
             newLi.parentNode.removeChild(newLi);
         }
+    }
+}
+function example() {
+    let example1 = document.getElementById("example1")
+    let listItem = document.getElementById("list_item")
+    listItem.appendChild(example1)
+    var deleteButton = document.createElement("button"); //creates a button for delete
+    deleteButton.setAttribute('class', 'delete')
+    deleteButton.innerHTML = '<img src = "del.png" height="40%" width="40%" />'
+    // deleteButton.appendChild(document.createTextNode("Delete"));
+    example1.appendChild(deleteButton);
+    // Delete a li item on click
+    deleteButton.onclick = function () {
+        example1.parentNode.removeChild(example1);
+    }
+    let example2 = document.getElementById("example2")
+    listItem.appendChild(example2)
+    var deleteButton = document.createElement("button"); //creates a button for delete
+    deleteButton.setAttribute('class', 'delete')
+    deleteButton.innerHTML = '<img src = "del.png" height="40%" width="40%" />'
+    // deleteButton.appendChild(document.createTextNode("Delete"));
+    example2.appendChild(deleteButton);
+    // Delete a li item on click
+    deleteButton.onclick = function () {
+        example2.parentNode.removeChild(example2);
     }
 }
